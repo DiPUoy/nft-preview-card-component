@@ -26,6 +26,9 @@ body{
     border-radius: .6rem;
     position: relative;
 }
+.containor .image{
+    position: relative;
+}
 .containor ul{
     display: flex;
     justify-content: space-between;
@@ -66,10 +69,8 @@ h2:hover,.btm span:nth-child(2):hover{
     color: hsl(178, 100%, 50%);
 }
 .image div{
-    content: '';
     background-color: hsla(178, 100%, 50%, 0.63);
     position: absolute;
-    /* top: 0; */
     width: 300px;
     height: 300px;
     border-radius: .6rem;
@@ -77,11 +78,16 @@ h2:hover,.btm span:nth-child(2):hover{
     justify-content: center;
     align-items: center;
     cursor: pointer;
-    display: none;
     z-index: 10 !important;
-
+    top: 0;
+    opacity: 0;
+    transition: .5s ease-in-out !important;
 }
 .image div img{
     height: 50px !important;
     width: 50px !important;
+}
+.image div:hover{
+    opacity: 1;
+
 }
